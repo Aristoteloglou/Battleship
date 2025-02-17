@@ -1,11 +1,9 @@
-module.exports = {reverseString, capitalize};
-
 
 function capitalize(string){
-    if(string === "hawai"){
-        return "Hawai";
+    if(typeof string !== 'string'){
+        throw new Error("YOU CAN ONLY ACCEPT STRING");
     }
-    return "Ligma";
+    return string.charAt(0).toUpperCase() + string.slice(1)
 
 }
 
@@ -22,4 +20,40 @@ function reverseString(string) {
     return newString;
 }
 
+class calculator{
+    constructor(){
 
+    }
+    subtract(num1, num2){
+        if(typeof num1 !== 'number' || typeof num2 !== 'number'){
+            throw new Error("YOU CAN ONLY ACCEPT NUMBER");
+        }
+        return num1 - num2;
+
+    }
+
+    divide(num1, num2){
+        if(typeof num1 !== 'number' || typeof num2 !== 'number'){
+            throw new Error("YOU CAN ONLY ACCEPT NUMBER");
+        }
+        return num1 / num2;
+    }
+
+    multiply(num1, num2){
+        if(typeof num1 !== 'number' || typeof num2 !== 'number'){
+            throw new Error("YOU CAN ONLY ACCEPT NUMBER");
+        }
+        return num1 * num2;
+    }
+
+    add(num1, num2){
+        if(typeof num1 !== 'number' || typeof num2 !== 'number'){
+            throw new Error("YOU CAN ONLY ACCEPT NUMBER");
+        }
+        return num1 + num2;
+
+    }
+}
+
+
+module.exports = {reverseString, capitalize, calculator};
