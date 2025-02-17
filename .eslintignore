@@ -1,8 +1,0 @@
-*.config.js.json
-node_modules/
-dist/
-build/
-coverage/
-package-lock.json
-*.min.js
-*.config.js

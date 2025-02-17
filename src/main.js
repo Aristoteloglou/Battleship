@@ -1,8 +1,8 @@
-class PrintConsole{
-    constructor(message){
-        console.log(message);
-    }
+function capitalize(string) {
+  string = "";
+  console.log(string);
+  return "AEY";
 }
 
-console.log("a");
-export default PrintConsole;
+module.exports = capitalize;
+//export default PrintConsole;
