@@ -1,4 +1,4 @@
-const{ reverseString, capitalize, calculator } = require("./main");
+const{ reverseString, capitalize, calculator ,caesarCipher} = require("./main");
 
 describe("Reverse String", () => {
   test("Input \"YEA\".", () => {
@@ -73,5 +73,29 @@ describe("Calculator", () => {
   });
   
 
+})
+
+describe('Caesar Cipher',() => {
+
+  test('Encrypt Ligma', () => {
+    expect(caesarCipher('Ligma', 1)).toBe('Mjhnb');
+  });
+
+
+  test('Test text wrapping', () => {
+    expect( caesarCipher('xyz', 3)).toBe('abc');
+  });
+
+  test('Test case preservation', () => {
+    expect( caesarCipher('HeLLo', 3)).toBe('KhOOr');
+  });
+
+  test('Test case preservation', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+  });
+
+
+
+ 
 })
 

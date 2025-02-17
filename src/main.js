@@ -56,4 +56,20 @@ class calculator{
 }
 
 
-module.exports = {reverseString, capitalize, calculator};
+function caesarCipher(message, encryption ){
+    message = message.split("");
+    let encrypted = message.map((char) =>{
+        if(char.match(/[a-z]/i)){
+            const code = char.charCodeAt(0);
+            const base = code >= 65 && code <= 90 ? 65 : 97;
+            return String.fromCharCode(((code - base + encryption) % 26 + 26) % 26 + base);
+        }else{
+            return char;
+        }
+    })
+    console.log(encrypted)
+    encrypted = encrypted.join("");
+    return encrypted;
+}
+
+module.exports = {reverseString, capitalize, calculator, caesarCipher};
