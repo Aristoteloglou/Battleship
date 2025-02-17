@@ -1,4 +1,4 @@
-const{ reverseString, capitalize, calculator ,caesarCipher} = require("./main");
+const{ analyzeArray, reverseString, capitalize, calculator ,caesarCipher} = require("./main");
 
 describe("Reverse String", () => {
   test("Input \"YEA\".", () => {
@@ -95,7 +95,12 @@ describe('Caesar Cipher',() => {
   });
 
 
+})
 
- 
+describe('Analyze array',() => {
+
+  test('Average of array of number', () => {
+    expect(analyzeArray([8,12,4,5])).toEqual({average: 7.25, min: 4, max:12, length:4});
+  });
 })
 

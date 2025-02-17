@@ -67,9 +67,24 @@ function caesarCipher(message, encryption ){
             return char;
         }
     })
-    console.log(encrypted)
     encrypted = encrypted.join("");
     return encrypted;
 }
 
-module.exports = {reverseString, capitalize, calculator, caesarCipher};
+function analyzeArray(array){
+    let average= 0;
+    let min = array[0];
+    let max = array[0];
+    let i = 0
+    let length = array.length;    
+    while(i < length){
+        average = average + array[i];
+        if(min > array[i]) min = array[i];
+        if(max < array[i]) max = array[i];
+        i++;
+    }
+    average = average / i;
+    return {average,min,max,length};
+}
+
+module.exports = {reverseString, capitalize, calculator, caesarCipher, analyzeArray};
