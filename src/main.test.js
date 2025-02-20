@@ -71,3 +71,14 @@ describe("Gameboard Class", () => {
     })
 });
 
+describe("Player Test",() => {
+
+    test("Player Send attack", () => {
+        let playerOne = new ship.Player();
+        let playerTwo = new ship.Player();
+        playerTwo.gameboard.placeShip(4, [0,1,2,3], [0,0,0,0]);
+        playerOne.sendAttack(0,0 ,playerTwo)
+        expect(playerTwo.gameboard.gameMap[1].type.hits).toEqual(1);
+    })
+
+});

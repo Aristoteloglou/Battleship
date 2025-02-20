@@ -43,7 +43,7 @@ class GameBoard{
 
     createEmpty(xC, yC){
         this.gameMap[0].x.push(xC);
-        this.gameMap[0].y.push(yC);
+        this.gameMap[0].y.push(yC); 
     }
 
     checkShips(){
@@ -53,10 +53,23 @@ class GameBoard{
     }
 }   
 
+class Player{
+    constructor(){
+        this.gameboard = new GameBoard();
+    }
+
+    sendAttack(xC,yC, pl){
+        pl.gameboard.receiveAttack(xC, yC);
+
+
+    };
+}
+
+
 function verticeCord(type,x, y){
     return { type, x: Array.isArray(x) ? x : [x], y: Array.isArray(y) ? y : [y] };
 
 }
 
 
-module.exports={Ship, GameBoard, verticeCord}
+module.exports={Ship, GameBoard, verticeCord, Player}
