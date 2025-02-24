@@ -63,7 +63,7 @@ class Player{
 
 
     };
-}
+}       
 
 
 function verticeCord(type,x, y){
