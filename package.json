@@ -4,13 +4,13 @@
   "description": "Template for webpack installed with some useful plugins",
   "main": "index.js",
   "scripts": {
-    "preformat": "npx eslint --fix ./src",
+    "preformat": "npx eslint --fix",
     "format": "prettier ./src --write",
     "test": "jest",
     "prebuild": "npm run format",
     "build": "webpack --config webpack.prod.js",
     "postbuild": "node ./dist/main.js",
-    "dev": "webpack --config webpack.dev.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "predev": "npx eslint --fix ./src",
     "postdev": "prettier ./src --write"
   },
